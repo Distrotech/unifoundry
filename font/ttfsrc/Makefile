@@ -41,11 +41,11 @@ export FONTFORGE_LANGUAGE = ff
 
 all: hex2sfd merge sfd2ttf
 
-hex2sfd: unifont.hex $(BINDIR)/hex2sfd
+hex2sfd: ../precompiled/unifont.hex $(BINDIR)/hex2sfd
 	echo "Separating unifont.hex into 16 parts"
 	for i in 0 1 2 3 4 5 6 7 8 9 A B C D E F ; \
 	   do \
-	   grep ^$$i unifont.hex > $$i.hex ; \
+	   grep ^$$i ../precompiled/unifont.hex > $$i.hex ; \
 	   $(BINDIR)/hex2sfd < $$i.hex > $$i.sfd ; \
 	done
 	for i in 0 1 2 3 4 5 6 7 8 9 A B C D E F ; \

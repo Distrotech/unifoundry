@@ -29,7 +29,7 @@ PROGS = $(CPROGS) $(PPROGS)
 
 all: $(CPROGS)
 	install    -m0755 -d $(INSTALLBINDIR)
-	install -s -m0755 $(CPROGS) $(INSTALLBINDIR)
+	install    -m0755 $(CPROGS) $(INSTALLBINDIR)
 	install    -m0755 $(PPROGS) $(INSTALLBINDIR)
 	\rm -f $(CPROGS)
 
@@ -43,7 +43,7 @@ install:
 	install -m0755 -d $(INSTALLDIR)
 	set -e ; \
 	   cd $(INSTALLBINDIR) ; \
-	   install -s -m0755 $(CPROGS) $(INSTALLDIR)
+	   install -m0755 $(CPROGS) $(INSTALLDIR)
 	set -e ; \
 	   cd ../bin ; \
 	   install    -m0755 $(PPROGS) $(INSTALLDIR)
