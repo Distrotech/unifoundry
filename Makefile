@@ -18,7 +18,7 @@ PREFIX = $(DESTDIR)/usr/share/grubfont
 
 DIRS = bin man font
 
-all: bindir
+all: bindir fontdir
 	echo "Make is done."
 
 bindir:
