@@ -27,8 +27,10 @@ BINDIR = $(CURDIR)/../bin
 # The top-level directory for installing fonts on the system,
 # and the installation directories for PCF and TrueType fonts.
 #
-PKGDEST = $(DESTDIR)/usr/share/unifont
-FONTDEST = $(DESTDIR)/usr/share/fonts
+SHAREDIR = /usr/share/unifont
+FONTDIR = /usr/share/fonts
+PKGDEST = $(DESTDIR)$(SHAREDIR)
+FONTDEST = $(DESTDIR)$(FONTDIR)
 PCFDEST = $(FONTDEST)/X11/misc
 TTFDEST = $(FONTDEST)/truetype/unifont
 #

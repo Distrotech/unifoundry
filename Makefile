@@ -14,7 +14,7 @@ SHELL = /bin/sh
 # under /usr/share/man/man1, choose the second PREFIX definition.
 #
 # PREFIX=/usr/local
-PREFIX = $(DESTDIR)/usr
+PREFIX = $(DESTDIR)/usr/share/grubfont
 
 DIRS = bin man font
 
